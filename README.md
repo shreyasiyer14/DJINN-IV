@@ -1,6 +1,6 @@
 #DJINN-IV Game Engine. 
 ![Build] (https://travis-ci.org/djeof-1/DJINN-IV.svg?branch=master)
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/e544083449bf4737829552a44ffcb6bd/badge.svg)](https://www.quantifiedcode.com/app/project/e544083449bf4737829552a44ffcb6bd)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/ce4e118f40f94c3f81a26ba3204cea61/badge.svg)](https://www.quantifiedcode.com/app/project/ce4e118f40f94c3f81a26ba3204cea61)
 ![License](https://poser.pugx.org/pugx/badge-poser/license?format=plastic%22%3E)
 <br />
 ![Image](https://avatars1.githubusercontent.com/u/13732949?v=3&u=9e161249d86f665b78a1da2194ac28258f086e70&s=140)
