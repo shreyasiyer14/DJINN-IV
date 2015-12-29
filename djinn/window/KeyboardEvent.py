@@ -19,7 +19,7 @@ def KeyboardEvent(moveArray):
 			if event.key == pygame.K_LEFT:
 				dx = 0.1
 		
-			if event.key == pygame.K_RIGHT:
+			elif event.key == pygame.K_RIGHT:
 				dx = -0.1
 		elif event.type == pygame.KEYUP:
 			dx,dz = 0,0
