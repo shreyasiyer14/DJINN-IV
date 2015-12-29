@@ -1,19 +1,20 @@
 import sys
 sys.path.append('../')
+
 from djinn.player.Player import *
-from djinn.scenes.shapes.Sphere import *
-from djinn.scenes.shapes.Room import *
-from djinn.scenes.shapes.Cylinder import *
-from djinn.scenes.shapes.Triangle import *
-from djinn.scenes.Light import *
 from djinn.window.Window import *
 from djinn.window.KeyboardEvent import *
-
+from djinn.scenes.shapes.Sphere import *
+from djinn.scenes.shapes.Cylinder import *
+from djinn.scenes.shapes.Triangle import *
+from djinn.scenes.shapes.Room import *
+from djinn.scenes.Light import *
+from djinn.scenes.Material import *
 if __name__=="__main__":
-	pygame.display.set_icon(pygame.image.load('djinn-iv-logo.bmp'))
 	window = Window((800,600))
 	window.start(70)
 	window.caption("DJINN IV Game Engine")	
+	window.icon('djinn-iv-logo.bmp')
 	play = Player(0,0,-5.0)
 	cylinder = Cylinder(0.5,0.5,15,-25,0,0,(0,1,0))
 	sphere = Sphere(1,-15,0,0,(0,0,1))
