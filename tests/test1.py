@@ -44,6 +44,7 @@ if __name__=="__main__":
 		window.clear()
 		keyPressed()
 		sphere.build()
+#		sphere.rotate(5,1,1)
 		cylinder.build()
 		triangle.build()
 		room.build()

@@ -18,7 +18,9 @@ class Sphere:
 	
 	@staticmethod
 	def rotate(x,y,z):
-		glRotatef(1,x,y,z)
+		glPushMatrix()
+		glRotatef(2,x,y,z)
+		glPopMatrix()
 
 	def build(self):
 		glPushMatrix()
@@ -26,7 +28,7 @@ class Sphere:
 		
 		material = Material()
 		material.materialize(128)
-	
+		
 		glNormal3f(0,1,0)
 		glTranslatef(self._x,self._y,self._z)
 		glColor3fv(self.color)
