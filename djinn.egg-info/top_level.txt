@@ -1,0 +1,7 @@
+djinn
+djinn/player
+djinn/scenes
+djinn/scenes/sample_textures/
+djinn/scenes/shapes
+djinn/scenes/textures
+djinn/window/
