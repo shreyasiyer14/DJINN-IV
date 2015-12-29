@@ -29,3 +29,6 @@ class Window:
 		clock = pygame.time.Clock()
 		pygame.display.flip()
 		clock.tick(60)
+	@staticmethod
+	def icon(fname):
+		pygame.display.set_icon(pygame.image.load(fname))
