@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 from djinn.player.Player import *
 from djinn.scenes.shapes.Sphere import *
 from djinn.scenes.shapes.Room import *
@@ -27,6 +29,7 @@ def keyPressed():
         		    tdx,tdz = 0,0
 
 if __name__=="__main__":
+	pygame.display.set_icon(pygame.image.load('djinn-iv-logo.bmp'))
 	window = Window((800,600))
 	window.start(70)
 	window.caption("DJINN IV Game Engine")	
