@@ -24,12 +24,6 @@ class Room:
 		tex = Texture(self.fname)
 		glBindTexture(GL_TEXTURE_2D,tex.loadTexture())
 		glBegin(GL_QUADS)
-		glNormal3f(0,1,0)		
-		glNormal3f(1,0,0)
-		glNormal3f(-1,0,0)
-		glNormal3f(0,-1,0)
-		glNormal3f(0,0,1)
-		glNormal3f(0,0,-1)
     		glTexCoord2f(0.0, 0.0); glVertex3f(-1.0*self.breadth/2, -1.0,  1.0);
       		glTexCoord2f(1.0, 0.0); glVertex3f( 1.0*self.breadth/2, -1.0,  1.0);
         	glTexCoord2f(1.0, 1.0); glVertex3f( 1.0*self.breadth/2,  1.0,  1.0);
@@ -54,6 +48,49 @@ class Room:
         	glTexCoord2f(1.0, 0.0); glVertex3f(-1.0*self.breadth/2 , -1.0,  1.0);
         	glTexCoord2f(1.0, 1.0); glVertex3f(-1.0*self.breadth/2 ,  1.0,  1.0);
         	glTexCoord2f(0.0, 1.0); glVertex3f(-1.0*self.breadth/2 ,  1.0, -1.0);	
+		glEnd()
+	
+		glBegin(GL_QUADS)
+		glNormal3f(0.0,0.0,1.0);
+		glVertex3f(self.breadth/2,self.height,self.length/2);
+		glVertex3f(-self.breadth/2,self.height,self.length/2);
+		glVertex3f(-self.breadth/2,0,self.length/2);
+		glVertex3f(self.breadth/2,0,self.length/2);
+
+		//left face
+		glNormal3f(-1.0,0.0,0.0);
+		glVertex3f(-self.breadth/2,self.height,self.length/2);
+		glVertex3f(-self.breadth/2,self.height,-self.length/2);
+		glVertex3f(-self.breadth/2,0,-self.length/2);
+		glVertex3f(-self.breadth/2,0,self.length/2);
+
+		//back face
+		glNormal3f(0.0,0.0,-1.0);
+		glVertex3f(self.breadth/2,self.height,-self.length/2);
+		glVertex3f(-self.breadth/2,self.height,-self.length/2);
+		glVertex3f(-self.breadth/2,0,-self.length/2);
+		glVertex3f(self.breadth/2,0,-self.length/2);
+
+		//right face
+		glNormal3f(1.0,0.0,0.0);
+		glVertex3f(self.breadth/2,self.height,-self.length/2);
+		glVertex3f(self.breadth/2,self.height,self.length/2);
+		glVertex3f(self.breadth/2,0,self.length/2);
+		glVertex3f(self.breadth/2,0,-self.length/2);
+
+		//top face
+		glNormal3f(0.0,1.0,0.0);
+		glVertex3f(self.breadth/2,self.height,self.length/2);
+		glVertex3f(-self.breadth/2,self.height,self.length/2);
+		glVertex3f(-self.breadth/2,0,-self.length/2);
+		glVertex3f(self.breadth/2,0,-self.length/2);
+
+		//bottom face
+		glNormal3f(0.0,-1.0,0.0);
+		glVertex3f(self.breadth/2,self.height,self.length/2);
+		glVertex3f(-self.breadth/2,self.height,self.length/2);
+		glVertex3f(-self.breadth/2,0,-self.length/2);
+		glVertex3f(self.breadth/2,0,-self.length/2);	
 		glEnd()
 		glDisable(GL_TEXTURE_2D)
 		glPopMatrix()
