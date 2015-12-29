@@ -26,7 +26,7 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 
 2) The above commands install the necessary dependencies on your system, for the engine to work upon. <br />
 
-3) Next, you have to install the game engine into your system, so as to make it work globally. For this, type in the following command in the terminal: <br />
+3) Next, you have to install the game engine onto your system, so as to make it work globally. For this, type in the following command in the terminal: <br />
 `sudo python setup.py install`<br />
 
 4) This will install djinn on your system, and now it is ready to use. Check 'test1.py' example file, in 'tests' folder, to learn the usage of the engine.
