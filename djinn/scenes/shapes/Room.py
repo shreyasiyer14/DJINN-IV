@@ -17,7 +17,6 @@ class Room:
 		self._z = z
 		self.color = color
 		self.fname = fname
-
 	def build(self):
                 glPushMatrix()
 		material = Material()
@@ -25,6 +24,12 @@ class Room:
 		tex = Texture(self.fname)
 		glBindTexture(GL_TEXTURE_2D,tex.loadTexture())
 		glBegin(GL_QUADS)
+		glNormal3f(0,1,0)		
+		glNormal3f(1,0,0)
+		glNormal3f(-1,0,0)
+		glNormal3f(0,-1,0)
+		glNormal3f(0,0,1)
+		glNormal3f(0,0,-1)
     		glTexCoord2f(0.0, 0.0); glVertex3f(-1.0*self.breadth/2, -1.0,  1.0);
       		glTexCoord2f(1.0, 0.0); glVertex3f( 1.0*self.breadth/2, -1.0,  1.0);
         	glTexCoord2f(1.0, 1.0); glVertex3f( 1.0*self.breadth/2,  1.0,  1.0);
