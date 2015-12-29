@@ -16,7 +16,8 @@ class Sphere:
 		self._z = z	
 		self.color = color
 	
-	def rotate(self,x,y,z):
+	@staticmethod
+	def rotate(x,y,z):
 		glRotatef(1,x,y,z)
 
 	def build(self):
