@@ -7,8 +7,6 @@
 <br />
 ##About DJINN
 DJINN IV is a full-fledged 3D game engine, built with OpenGL and Pygame, for Python programming language (Python 2.7 is supported at the moment. Further support will be introduced in future releases) . DJINN IV is a relatively easier to use engine compared to others available in the market, because not only Physics is taken care of for your game, but also other event handling, graphical rendering, textures, and loads more. DJINN IV has a new algorithm for collision detection, to make it seem as realistic as possible, but still to be implemented. This engine, with decent 3D game graphics, is heavily suitable for FPS, SPS, and TPS, as well as MMORPG, and others.
-
-<br />
 <br />
 ##Why DJINN? <br />
  Now, we know that there are plenty of professional-quality engines available in the market right now, and that too for free (Consider UDK, Cocos-2Dx, Box2D, etc.) But, the problem is that these engines mostly target C,C++, JavaScript, or HTML5. Very few engines actually are totally built in, and support Python. Also, the engines which are built have a bit cryptic source code, which makes it difficult for the novice developers to contribute to. But, DJINN being totally built using Python, Pygame, and PyOpenGL, makes contributing easier, because of clean organization of source files, and cleaner syntax (Python!). This helps in overall maintainance of the code, as well as makes the bug tracking easier. <br />
