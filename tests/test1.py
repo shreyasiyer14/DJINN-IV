@@ -26,15 +26,17 @@ if __name__=="__main__":
 	light0.bake(GL_LIGHT0)
 	light1.bake(GL_LIGHT1)
 	moveList = [0,0,0]
+
 	while True:
-		window.clear()
 		KeyboardEvent(moveList,1,0,0,K_LEFT)
 		KeyboardEvent(moveList,-1,0,0,K_RIGHT)
 		KeyboardEvent(moveList,0,0,1,K_UP)
 		KeyboardEvent(moveList,0,0,-1,K_DOWN)
+		window.clear()
 		sphere.build()
 		cylinder.build()
 		triangle.build()
 		room.build()
 		play.move(moveList[0],0,moveList[2])
+		pygame.time.Clock().tick(60)
 		window.update()
