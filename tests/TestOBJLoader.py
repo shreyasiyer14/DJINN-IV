@@ -2,7 +2,7 @@ from djinn.scenes.prefabs.OBJLoader import *
 from djinn.window.Window import *
 
 if __name__=="__main__":
-	obj = OBJ('Farmhouse.obj',swapyz = False)
+	obj = OBJ('Farmhouse.obj',swapyz = True)
 	window = Window((800,600))
 	window.start(60)	
 	glTranslatef(0,0,-5)
