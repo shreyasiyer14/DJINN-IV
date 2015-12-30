@@ -5,7 +5,7 @@ class Material:
 	def __init__(self):
 		pass
 	@staticmethod
-	def materialize(shininess):
+	def init(shininess):
 		glEnable(GL_COLOR_MATERIAL)
 		glShadeModel(GL_SMOOTH)
 		glMaterialfv(GL_FRONT,GL_AMBIENT,[0.2,0.2,0.2,1])

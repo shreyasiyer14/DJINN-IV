@@ -20,7 +20,7 @@ class Room:
 	def build(self):
                 glPushMatrix()
 		material = Material()
-		material.materialize(128)
+		material.init(128)
 
 		
 		tex = Texture(self.fname)

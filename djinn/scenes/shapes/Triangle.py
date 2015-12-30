@@ -23,7 +23,7 @@ class Triangle:
 	def build(self):
                 glPushMatrix()
 		material = Material()
-		material.materialize(128)
+		material.init(128)
 		glBegin(GL_TRIANGLES)
 		glNormal3f(0,1,0)
 		glColor3fv(self.color)

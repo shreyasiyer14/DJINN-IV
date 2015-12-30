@@ -27,7 +27,7 @@ class Sphere:
 		quadric = gluNewQuadric()	
 		
 		material = Material()
-		material.materialize(128)
+		material.init(128)
 		
 		glNormal3f(0,1,0)
 		glTranslatef(self._x,self._y,self._z)
