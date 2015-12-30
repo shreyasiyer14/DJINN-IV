@@ -13,6 +13,8 @@ djinn/scenes/Light.py
 djinn/scenes/Material.py
 djinn/scenes/Sun.py
 djinn/scenes/__init__.py
+djinn/scenes/prefabs/OBJLoader.py
+djinn/scenes/prefabs/__init__.py
 djinn/scenes/shapes/Box.py
 djinn/scenes/shapes/Cylinder.py
 djinn/scenes/shapes/Room.py

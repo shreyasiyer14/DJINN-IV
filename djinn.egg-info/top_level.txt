@@ -2,7 +2,7 @@ djinn
 djinn/physics
 djinn/player
 djinn/scenes
-djinn/scenes/sample_textures/
+djinn/scenes/prefabs/
 djinn/scenes/shapes
 djinn/scenes/textures
 djinn/window/
