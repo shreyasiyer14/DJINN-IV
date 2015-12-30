@@ -1,27 +1,25 @@
 import pygame
 from pygame.locals import *
 
+from djinn.physics.Thrust import *
+
 pygame.init()
-def KeyboardEvent(moveArray):
-	dx,dz = 0,0
+def KeyboardEvent(moveArray,x,y,z,key):
+	dx,dy,dz = 0,0,0
+	moveForce = Thrust(x,y,z)
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			pygame.quit()
 			quit()
-		
 		elif event.type == pygame.KEYDOWN:
-			if event.key == pygame.K_UP:
-				dz = 0.1
-			
-			elif event.key == pygame.K_DOWN:
-				dz = -0.1
-
-			if event.key == pygame.K_LEFT:
-				dx = 0.1
-		
-			elif event.key == pygame.K_RIGHT:
-				dx = -0.1
+			if event.type == pygame.key:
+				dz = moveForce.thrustValueZ
+				dy = moveForce.thrustValueY	
+				dx = moveForce.thrustValueX 
+			else:
+				break
 		elif event.type == pygame.KEYUP:
-			dx,dz = 0,0
+			dx,dy,dz = 0,0,0
 		moveArray[0] = dx
+		moveArray[1] = dy
 		moveArray[2] = dz

@@ -28,7 +28,10 @@ if __name__=="__main__":
 	moveList = [0,0,0]
 	while True:
 		window.clear()
-		KeyboardEvent(moveList)
+		KeyboardEvent(moveList,1,0,0,K_LEFT)
+		KeyboardEvent(moveList,-1,0,0,K_RIGHT)
+		KeyboardEvent(moveList,0,0,1,K_UP)
+		KeyboardEvent(moveList,0,0,-1,K_DOWN)
 		sphere.build()
 		cylinder.build()
 		triangle.build()

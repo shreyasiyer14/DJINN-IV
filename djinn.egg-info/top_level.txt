@@ -1,4 +1,5 @@
 djinn
+djinn/physics
 djinn/player
 djinn/scenes
 djinn/scenes/sample_textures/

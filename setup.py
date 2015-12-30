@@ -17,7 +17,7 @@ setup(
     license = "MIT",
     keywords = "3dgameengine engine opengl",
     url = "http://packages.python.org/",
-    packages=['djinn','djinn/scenes/textures', 'djinn/scenes/sample_textures/', 'djinn/scenes', 'djinn/player', 'djinn/window/', 'djinn/scenes/shapes'],
+    packages=['djinn','djinn/scenes/textures', 'djinn/scenes/sample_textures/', 'djinn/scenes', 'djinn/player', 'djinn/window/', 'djinn/scenes/shapes', 'djinn/physics'],
     long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
