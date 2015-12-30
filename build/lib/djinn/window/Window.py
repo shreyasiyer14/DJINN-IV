@@ -24,12 +24,9 @@ class Window:
 	@staticmethod
 	def clear():
 		glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-		glLoadIdentity()
 	@staticmethod
 	def update():
-		clock = pygame.time.Clock()
 		pygame.display.flip()
-		clock.tick(60)
 	@staticmethod
 	def icon(fname):
 		pygame.display.set_icon(pygame.image.load(fname))
