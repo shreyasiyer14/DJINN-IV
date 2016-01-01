@@ -24,11 +24,13 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 1) Pygame <br />
 2) PyOpenGL <br />
 3) PyOpenGL accelerate
+4) Python 2.7 (maybe it will work for older versions.)
   
 <br />
 <b><u>INSTALLATION:</u></b>
 <br />
 
+<b>Before starting </b> You need to make sure that you have Python installed on your system. For checking, goto the terminal and type in: `python` and an interpreter should start. Now, check the python version which is displayed on the first line of the interpreter. Make sure it is 2.7. If not, goto www.python.org, and goto the "Downloads" page, and download 'Python 2.7 - 32 bit' version (32-bit is crucial). Python for Windows can be downloaded too. Now, with that properly set up, proceed to the following steps: </br>
 1) Download the repository as a .ZIP file, and extract it somewhere. Open up the terminal, and change your working directory to the extracted folder. Now, in the terminal type: <br />`chmod +x PRE-INSTALL.sh`<br/>`./PRE-INSTALL.sh` <br />
 
 2) The above commands install the necessary dependencies on your system, for the engine to work upon. <br />
