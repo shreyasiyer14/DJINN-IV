@@ -21,11 +21,8 @@ if __name__=="__main__":
 	light0.bake(GL_LIGHT0)
 	light1.bake(GL_LIGHT1)
 	moveList = [0,0,0]
-
 	while True:
-		KeyboardEvent(moveList)
 		window.clear()
-		
 		play.move(moveList[0],0,moveList[2])
 		sphere.build()
 		cylinder.build()

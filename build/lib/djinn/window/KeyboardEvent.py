@@ -1,7 +1,6 @@
 import pygame
 from pygame.locals import *
 pygame.init()
-
 def KeyboardEvent(moveArray,x,y,z,KEY,event):
 	dx,dy,dz = x,y,z
 	if event.type == pygame.QUIT:
