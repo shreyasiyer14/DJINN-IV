@@ -23,7 +23,7 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 
 1) Pygame <br />
 2) PyOpenGL <br />
-3) PyOpenGL accelerate
+3) PyOpenGL accelerate <br />
 4) Python 2.7 (maybe it will work for older versions.)
   
 <br />
