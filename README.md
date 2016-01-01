@@ -25,7 +25,7 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 <b><u>INSTALLATION:</u></b>
 <br />
 
-1) Download the repository as a .ZIP file, and extract it somewhere. Open up the terminal, and change your working directory to the extracted folder. Now, in the terminal type: <br />`sudo apt-get pygame`<br/>`pip install -r PyOpenGL PyOpenGL_accelerate` <br />
+1) Download the repository as a .ZIP file, and extract it somewhere. Open up the terminal, and change your working directory to the extracted folder. Now, in the terminal type: <br />`chmod +x PRE-INSTALL.sh`<br/>`./PRE-INSTALL.sh` <br />
 
 2) The above commands install the necessary dependencies on your system, for the engine to work upon. <br />
 
