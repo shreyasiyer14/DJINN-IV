@@ -12,14 +12,10 @@ if __name__=="__main__":
 	light0.bake(GL_LIGHT0)
 	light1.bake(GL_LIGHT1)
 	moveList = [0,0,0]
+	keymap = {'up':[0,0,0.05],'down':[0,0,-0.05],'left':[0.05,0,0],'right':[-0.05,0,0]}
 	while True:
-		for event in pygame.event.get():
-			KeyboardEvent(moveList,0.1,0,0,'left',event)
-			KeyboardEvent(moveList,-0.1,0,0,'right',event)
-			KeyboardEvent(moveList,0,0,-0.1,'up',event)
-			KeyboardEvent(moveList,0,0,0.1,'down',event)
-		window.clear()	
-		print moveList
+                KeyboardEvent(moveList,keymap)
+		window.clear()
 		play.move(moveList[0],moveList[1],moveList[2])
 		room.build()
 		window.update()
