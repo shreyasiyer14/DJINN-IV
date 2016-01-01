@@ -1,14 +1,9 @@
 # LMB + move: rotate
 # RMB + move: pan
 # Scroll wheel: zoom in/out
-import sys, pygame
-from pygame.locals import *
-from pygame.constants import *
-from OpenGL.GL import *
-from OpenGL.GLU import *
- 
+import sys
 # IMPORT OBJECT LOADER
-from djinn.scenes.prefabs.OBJLoader import *
+from djinn import *
  
 pygame.init()
 viewport = (800,600)

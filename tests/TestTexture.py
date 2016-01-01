@@ -1,10 +1,12 @@
+from djinn import *
+'''
 from djinn.player.Player import *
 from djinn.window.Window import *
 from djinn.window.KeyboardEvent import *
 from djinn.scenes.shapes.Room import *
 from djinn.scenes.Light import *
 from djinn.scenes.Material import *
-
+'''
 if __name__=="__main__":
 	window = Window((800,600))
 	window.start(70)

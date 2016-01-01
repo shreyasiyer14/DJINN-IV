@@ -1,11 +1,4 @@
-from djinn.player.Player import *
-from djinn.window.Window import *
-from djinn.window.KeyboardEvent import *
-from djinn.scenes.shapes.Sphere import *
-from djinn.scenes.shapes.Cylinder import *
-from djinn.scenes.shapes.Triangle import *
-from djinn.scenes.Light import *
-from djinn.scenes.Material import *
+from djinn import *
 if __name__=="__main__":
 	window = Window((800,600))
 	window.start(70)
