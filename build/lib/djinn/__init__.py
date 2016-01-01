@@ -11,3 +11,8 @@ from scenes.prefabs.OBJLoader import *
 from scenes.Material import *
 from player.Player import *
 from math.Vector import *
+from physics.Acceleration import *
+from physics.Thrust import *
+from physics.Mass import *
+from physics.Torque import *
+
