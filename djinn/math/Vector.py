@@ -18,6 +18,6 @@ class Vector:
         self._x *= vector._x
         self._y *= vector._y
         self._z *= vector._z
-
+        return self._x+self._y+self._z
     
         
