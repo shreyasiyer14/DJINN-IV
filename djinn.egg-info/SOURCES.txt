@@ -5,7 +5,12 @@ djinn.egg-info/PKG-INFO
 djinn.egg-info/SOURCES.txt
 djinn.egg-info/dependency_links.txt
 djinn.egg-info/top_level.txt
+djinn/math/Vector.py
+djinn/math/__init__.py
+djinn/physics/Acceleration.py
+djinn/physics/Mass.py
 djinn/physics/Thrust.py
+djinn/physics/Torque.py
 djinn/physics/__init__.py
 djinn/player/Player.py
 djinn/player/__init__.py
