@@ -6,6 +6,9 @@
 <br />
 ![Image](https://avatars1.githubusercontent.com/u/13732949?v=3&u=9e161249d86f665b78a1da2194ac28258f086e70&s=140)
 <br />
+##NOTE
+The builds of DJINN have been failing on various deployment tools (Travis CI and Codeship), just because `pygame` cannot be installed simply by using `pip install pygame`. For installing pygame, `apt-get` fetches the correct package. I have already made a `PRE-INSTALL.sh` script file to install all the necessary dependencies. So, let the `build: failing` not scare you from using DJINN :)
+<br />
 ##About DJINN
 DJINN IV is a full-fledged 3D game engine, built with OpenGL and Pygame, for Python programming language (Python 2.7 is supported at the moment. Further support will be introduced in future releases) . DJINN IV is a relatively easier to use engine compared to others available in the market, because not only Physics is taken care of for your game, but also other event handling, graphical rendering, textures, and loads more. DJINN IV has a new algorithm for collision detection, to make it seem as realistic as possible, but still to be implemented. This engine, with decent 3D game graphics, is heavily suitable for FPS, SPS, and TPS, as well as MMORPG, and others.
 <br />
