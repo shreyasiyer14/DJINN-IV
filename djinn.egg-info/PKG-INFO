@@ -14,6 +14,9 @@ Description: #DJINN-IV Game Engine.
         <br />
         ![Image](https://avatars1.githubusercontent.com/u/13732949?v=3&u=9e161249d86f665b78a1da2194ac28258f086e70&s=140)
         <br />
+        ##NOTE
+        The builds of DJINN have been failing on various deployment tools (Travis CI and Codeship), just because `pygame` cannot be installed simply by using `pip install pygame`. For installing pygame, `apt-get` fetches the correct package. I have already made a `PRE-INSTALL.sh` script file to install all the necessary dependencies. So, let the `build: failing` not scare you from using DJINN :)
+        <br />
         ##About DJINN
         DJINN IV is a full-fledged 3D game engine, built with OpenGL and Pygame, for Python programming language (Python 2.7 is supported at the moment. Further support will be introduced in future releases) . DJINN IV is a relatively easier to use engine compared to others available in the market, because not only Physics is taken care of for your game, but also other event handling, graphical rendering, textures, and loads more. DJINN IV has a new algorithm for collision detection, to make it seem as realistic as possible, but still to be implemented. This engine, with decent 3D game graphics, is heavily suitable for FPS, SPS, and TPS, as well as MMORPG, and others.
         <br />
@@ -28,12 +31,14 @@ Description: #DJINN-IV Game Engine.
         
         1) Pygame <br />
         2) PyOpenGL <br />
-        3) PyOpenGL accelerate
+        3) PyOpenGL accelerate <br />
+        4) Python 2.7 (maybe it will work for older versions.)
           
         <br />
         <b><u>INSTALLATION:</u></b>
         <br />
         
+        <b>Before starting </b> You need to make sure that you have Python installed on your system. For checking, goto the terminal and type in: `python` and an interpreter should start. Now, check the python version which is displayed on the first line of the interpreter. Make sure it is 2.7. If not, goto www.python.org, and goto the "Downloads" page, and download 'Python 2.7 - 32 bit' version (32-bit is crucial). Python for Windows can be downloaded too. Now, with that properly set up, proceed to the following steps: </br>
         1) Download the repository as a .ZIP file, and extract it somewhere. Open up the terminal, and change your working directory to the extracted folder. Now, in the terminal type: <br />`chmod +x PRE-INSTALL.sh`<br/>`./PRE-INSTALL.sh` <br />
         
         2) The above commands install the necessary dependencies on your system, for the engine to work upon. <br />
