@@ -1,3 +1,5 @@
+from dependencies import *
+
 from window.Window import *
 from window.KeyboardEvent import *
 from scenes.shapes.Sphere import *
