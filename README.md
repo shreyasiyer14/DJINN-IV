@@ -40,4 +40,11 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 
 4) This will install djinn on your system, and now it is ready to use. Check the test/example files, in 'tests' folder, to learn about how DJINN actually works,and how to make it work.
 
+##Screenshots
+<b>.OBJ model loader </b><br />
+![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/1.png?raw=true)
+<b> 2D texturing on shapes. </b> <br />
+![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/2.png?raw=true)
+<b> Various drawabe 3D and 2D shapes. </b> <br />
+![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/3.png?raw=true)
 
