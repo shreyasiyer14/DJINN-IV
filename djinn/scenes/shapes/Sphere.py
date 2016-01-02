@@ -32,7 +32,7 @@ class Sphere:
 		glNormal3f(0,1,0)
 		glTranslatef(self._x,self._y,self._z)
 		glColor3fv(self.color)
-		glutSolidSphere(1,500,500)	
+		glutSolidSphere(1,256,256)	
 		gluDeleteQuadric(quadric);
 		glPopMatrix();
 
