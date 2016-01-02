@@ -31,14 +31,18 @@ def MTL(filename):
     return contents
  
 class OBJ:
-    def __init__(self, filename, swapyz=False):
+    def __init__(self,x,y,z, filename, swapyz=False):
         """Loads a Wavefront OBJ file. """
         self.vertices = []
         self.normals = []
         self.texcoords = []
         self.faces = []
- 
+        self.x = x
+        self.y = y
+        self.z = z
         material = None
+        glPushMatrix()
+        glTranslatef(self.x,self.y,self.z)
         for line in open(filename, "r"):
             if line.startswith('#'): continue
             values = line.split()
@@ -101,3 +105,4 @@ class OBJ:
             glEnd()
         glDisable(GL_TEXTURE_2D)
         glEndList()
+        glPopMatrix()
