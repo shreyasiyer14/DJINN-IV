@@ -48,3 +48,7 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 <b> Various drawable 3D and 2D shapes. </b> <br />
 ![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/3.png?raw=true)
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/djeof-1/djinn-iv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
