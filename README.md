@@ -49,6 +49,7 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 ![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/3.png?raw=true)
 
 
-
+##Show the world that you used DJINN!
+Make it one of the most trending repositories!
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/djeof-1/djinn-iv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
