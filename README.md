@@ -1,5 +1,5 @@
 #DJINN-IV Game Engine. 
-[ ![Codeship Status for djeof-1/DJINN-IV](https://codeship.com/projects/edde0000-92bf-0133-9835-4219f5e7a61a/status?branch=master)](https://codeship.com/projects/124754)
+[![Codeship Status for djeof-1/DJINN-IV](https://codeship.com/projects/edde0000-92bf-0133-9835-4219f5e7a61a/status?branch=master)](https://codeship.com/projects/124754)
 ![Build] (https://travis-ci.org/djeof-1/DJINN-IV.svg?branch=master)
 [![Code Issues](https://www.quantifiedcode.com/api/v1/project/ce4e118f40f94c3f81a26ba3204cea61/badge.svg)](https://www.quantifiedcode.com/app/project/ce4e118f40f94c3f81a26ba3204cea61)
 ![License](https://poser.pugx.org/pugx/badge-poser/license?format=plastic%22%3E)
@@ -40,4 +40,11 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 
 4) This will install djinn on your system, and now it is ready to use. Check the test/example files, in 'tests' folder, to learn about how DJINN actually works,and how to make it work.
 
+##Screenshots
+<b>.OBJ model loader </b><br />
+![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/1.png?raw=true)
+<b> 2D texturing on shapes. </b> <br />
+![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/2.png?raw=true)
+<b> Various drawable 3D and 2D shapes. </b> <br />
+![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/3.png?raw=true)
 

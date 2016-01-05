@@ -22,7 +22,7 @@ glEnable(GL_DEPTH_TEST)
 glShadeModel(GL_SMOOTH)           # most obj files expect to be smooth-shaded
  
 # LOAD OBJECT AFTER PYGAME INIT
-obj = OBJ('Farmhouse.obj', swapyz=True)
+obj = OBJ(100,-50,0,'Farmhouse.obj', swapyz=True)
  
 clock = pygame.time.Clock()
  

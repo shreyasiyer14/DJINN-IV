@@ -1,9 +1,11 @@
 import pygame
 from OpenGL.GL import *
  
-def MTL(filename):
+def MTL(filename,x,y,z):
     contents = {}
     mtl = None
+    glPushMatrix()
+    glTranslatef(x,y,z)
     for line in open(filename, "r"):
         if line.startswith('#'): continue
         values = line.split()
@@ -28,16 +30,19 @@ def MTL(filename):
                 GL_UNSIGNED_BYTE, image)
         else:
             mtl[values[0]] = map(float, values[1:])
+    glPopMatrix()
     return contents
  
 class OBJ:
-    def __init__(self, filename, swapyz=False):
+    def __init__(self,x,y,z, filename, swapyz=False):
         """Loads a Wavefront OBJ file. """
         self.vertices = []
         self.normals = []
         self.texcoords = []
         self.faces = []
- 
+        self.x = x
+        self.y = y
+        self.z = z
         material = None
         for line in open(filename, "r"):
             if line.startswith('#'): continue
@@ -58,7 +63,7 @@ class OBJ:
             elif values[0] in ('usemtl', 'usemat'):
                 material = values[1]
             elif values[0] == 'mtllib':
-                self.mtl = MTL(values[1])
+                self.mtl = MTL(values[1],self.x,self.y,self.z)
             elif values[0] == 'f':
                 face = []
                 texcoords = []
