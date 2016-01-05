@@ -7,7 +7,7 @@
 ##Textures & Models
 1) Farmhouse.obj Model (&textures) - www.tf3dm.com (Made by: animatedheaven)
 <br />
-2) Brick image file (Unknown source)
+2) Brick image file - ( Soho Brick (By Boone Speed))
 
 ##Platform
 1) Python 2.7 - www.python.org
