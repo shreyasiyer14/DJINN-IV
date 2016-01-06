@@ -50,5 +50,5 @@ class Room:
         	glTexCoord2f(2.0, 2.0); glVertex3f(-1.0*self.breadth/2 ,  1.0*self.height,  1.0*self.length);
         	glTexCoord2f(0.0, 2.0); glVertex3f(-1.0*self.breadth/2 ,  1.0*self.height, -1.0);	
 		glEnd()
-		glDisable(GL_TEXTURE_2D)
-		glPopMatrix()
+		glDeleteTextures(1)
+                glPopMatrix()
