@@ -44,7 +44,7 @@ Considering the small size of the entire engine, it is a nifty tool that can hel
 <b>.OBJ model loader </b><br />
 ![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/1.png?raw=true)
 <b> 2D texturing on shapes. </b> <br />
-![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/2.png?raw=true)
+![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/4.png?raw=true)
 <b> Various drawable 3D and 2D shapes. </b> <br />
 ![Image](https://github.com/djeof-1/DJINN-IV/blob/master/screenshots/3.png?raw=true)
 
