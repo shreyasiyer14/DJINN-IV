@@ -5,7 +5,7 @@ if __name__=="__main__":
 	window.caption("DJINN IV Game Engine")	
 	window.icon('djinn-iv-logo.bmp')
 	play = Player(0,0,-5.0)
-	room = Room(20,7,4,0,5,25,(0.2,0.2,0),'brick.bmp')
+	room = Room(20,7,4,1,0,10,2,'brick.bmp')
 	play.setOrigin(0,0,-25.0)
 	light0 = Light(20,10,0,[1,1,1,1],1)
 	light0.bake(GL_LIGHT0)
