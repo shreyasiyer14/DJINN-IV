@@ -8,14 +8,14 @@ from djinn.scenes.Material import *
 from djinn.scenes.textures.Texture import *
 
 class Box:
-	def __init__(self,length,breadth,height,x,y,z,color,fname):
+	def __init__(self,length,breadth,height,x,y,z,tiling,fname):
 		self.length = length    
 		self.breadth = breadth
 		self.height = height
 		self._x = x
 		self._y = y
 		self._z = z
-		self.color = color
+		self.tilingFactor = tiling
 		self.fname = fname
 	def build(self):
                 glPushMatrix()
@@ -25,30 +25,30 @@ class Box:
 		tex = Texture(self.fname)
 		glBindTexture(GL_TEXTURE_2D,tex.loadTexture())
 		glBegin(GL_QUADS)
-        	glTexCoord2f(0.0, 1.0); glVertex3f(-1.0 + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
+        	glTexCoord2f(0.0, self.tilingFactor); glVertex3f(-1.0 + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
     		glTexCoord2f(0.0, 0.0); glVertex3f(-1.0 + self._x, -1.0 + self._y,  1.0*self.length + self._z);
-      		glTexCoord2f(1.0, 0.0); glVertex3f( 1.0*self.breadth + self._x, -1.0 + self._y,  1.0*self.length + self._z);
-        	glTexCoord2f(1.0, 1.0); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
-        	glTexCoord2f(1.0, 0.0); glVertex3f(-1.0 + self._x, -1.0 + self._y, -1.0 + self._z);
-        	glTexCoord2f(1.0, 1.0); glVertex3f(-1.0 + self._x,  1.0*self.height + self._y , -1.0 + self._z);
-        	glTexCoord2f(0.0, 1.0); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y, -1.0 + self._z);
+      		glTexCoord2f(self.tilingFactor, 0.0); glVertex3f( 1.0*self.breadth + self._x, -1.0 + self._y,  1.0*self.length + self._z);
+        	glTexCoord2f(self.tilingFactor, self.tilingFactor); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
+        	glTexCoord2f(self.tilingFactor, 0.0); glVertex3f(-1.0 + self._x, -1.0 + self._y, -1.0 + self._z);
+        	glTexCoord2f(self.tilingFactor, self.tilingFactor); glVertex3f(-1.0 + self._x,  1.0*self.height + self._y , -1.0 + self._z);
+        	glTexCoord2f(0.0,self.tilingFactor); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y, -1.0 + self._z);
         	glTexCoord2f(0.0, 0.0); glVertex3f( 1.0*self.breadth +self._x, -1.0 + self._y, -1.0 + self._z);
-        	glTexCoord2f(0.0, 1.0); glVertex3f(-1.0 + self._x ,  1.0*self.height+self._y, -1.0 + self._z);
+        	glTexCoord2f(0.0,self.tilingFactor); glVertex3f(-1.0 + self._x ,  1.0*self.height+self._y, -1.0 + self._z);
         	glTexCoord2f(0.0, 0.0); glVertex3f(-1.0 + self._x ,  1.0*self.height+ self._y,  1.0*self.length + self._z);
-        	glTexCoord2f(1.0, 0.0); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
-       		glTexCoord2f(1.0, 1.0); glVertex3f( 1.0*self.breadth + self._x ,  1.0*self.height + self._y, -1.0 + self._z);
-        	glTexCoord2f(1.0, 1.0); glVertex3f(-1.0 + self._x , -1.0 + self._y, -1.0 + self._z);
-        	glTexCoord2f(0.0, 1.0); glVertex3f( 1.0 *self.breadth + self._x, -1.0 + self._y, -1.0 + self._z);
+        	glTexCoord2f(self.tilingFactor, 0.0); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
+       		glTexCoord2f(self.tilingFactor, self.tilingFactor); glVertex3f( 1.0*self.breadth + self._x ,  1.0*self.height + self._y, -1.0 + self._z);
+        	glTexCoord2f(self.tilingFactor, self.tilingFactor); glVertex3f(-1.0 + self._x , -1.0 + self._y, -1.0 + self._z);
+        	glTexCoord2f(0.0,self.tilingFactor); glVertex3f( 1.0 *self.breadth + self._x, -1.0 + self._y, -1.0 + self._z);
         	glTexCoord2f(0.0, 0.0); glVertex3f( 1.0*self.breadth + self._x, -1.0 + self._y,  1.0*self.length + self._z);
-        	glTexCoord2f(1.0, 0.0); glVertex3f(-1.0 + self._x , -1.0 + self._y,  1.0*self.length + self._z);
-        	glTexCoord2f(1.0, 0.0); glVertex3f( 1.0*self.breadth + self._x, -1.0 + self._y, -1.0 + self._z);
-        	glTexCoord2f(1.0, 1.0); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y, -1.0 + self._z);
-        	glTexCoord2f(0.0, 1.0); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
+        	glTexCoord2f(self.tilingFactor, 0.0); glVertex3f(-1.0 + self._x , -1.0 + self._y,  1.0*self.length + self._z);
+        	glTexCoord2f(self.tilingFactor, 0.0); glVertex3f( 1.0*self.breadth + self._x, -1.0 + self._y, -1.0 + self._z);
+        	glTexCoord2f(self.tilingFactor, self.tilingFactor); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y, -1.0 + self._z);
+        	glTexCoord2f(0.0,self.tilingFactor); glVertex3f( 1.0*self.breadth + self._x,  1.0*self.height + self._y,  1.0*self.length + self._z);
         	glTexCoord2f(0.0, 0.0); glVertex3f( 1.0*self.breadth + self._x , -1.0 + self._y,  1.0*self.length + self._z);
         	glTexCoord2f(0.0, 0.0); glVertex3f(-1.0 + self._x , -1.0 + self._y, -1.0 + self._z);
-        	glTexCoord2f(1.0, 0.0); glVertex3f(-1.0 + self._x , -1.0 + self._y,  1.0*self.length + self._z);
-        	glTexCoord2f(1.0, 1.0); glVertex3f(-1.0 + self._x ,  1.0*self.height + self._y,  1.0*self.length + self._z);
-        	glTexCoord2f(0.0, 1.0); glVertex3f(-1.0 + self._x ,  1.0*self.height+ self._y, -1.0 + self._z);	
+        	glTexCoord2f(self.tilingFactor, 0.0); glVertex3f(-1.0 + self._x , -1.0 + self._y,  1.0*self.length + self._z);
+        	glTexCoord2f(self.tilingFactor, self.tilingFactor); glVertex3f(-1.0 + self._x ,  1.0*self.height + self._y,  1.0*self.length + self._z);
+        	glTexCoord2f(0.0,self.tilingFactor); glVertex3f(-1.0 + self._x ,  1.0*self.height+ self._y, -1.0 + self._z);	
 		glEnd()
 		glDeleteTextures(1)
                 glPopMatrix()
