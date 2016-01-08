@@ -22,6 +22,7 @@ djinn/scenes/prefabs/OBJLoader.py
 djinn/scenes/prefabs/__init__.py
 djinn/scenes/shapes/Box.py
 djinn/scenes/shapes/Cylinder.py
+djinn/scenes/shapes/Plane.py
 djinn/scenes/shapes/Room.py
 djinn/scenes/shapes/Sphere.py
 djinn/scenes/shapes/Triangle.py
