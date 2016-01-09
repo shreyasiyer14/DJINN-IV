@@ -10,7 +10,7 @@ class Window:
 	
 	def start(self,fieldOfView):
 		pygame.init()
-		pygame.display.set_mode((self.width,self.height),DOUBLEBUF|OPENGL)
+		gameDisplay = pygame.display.set_mode((self.width,self.height),DOUBLEBUF|OPENGLBLIT|OPENGL)
 		glClearColor(0,0,0,1)
 		glMatrixMode(GL_PROJECTION)
 		glLoadIdentity()
@@ -18,6 +18,7 @@ class Window:
 		gluPerspective(fieldOfView,(self.width/self.height),0.1,50)
 		glEnable(GL_DEPTH_TEST)
 		glMatrixMode(GL_MODELVIEW)
+		return gameDisplay
 	@staticmethod
 	def caption(msg):
 		pygame.display.set_caption(msg)	

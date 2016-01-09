@@ -19,7 +19,7 @@ class Player:
 		self._y += dy
 		self._z += dz
 		glTranslatef(dx,dy,dz)
-
+    
 	
 
 	
