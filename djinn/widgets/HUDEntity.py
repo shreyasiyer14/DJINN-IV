@@ -7,17 +7,10 @@ class HUDEntity:
     def __init__(self,tup,tup2,fname):
         self._x = tup[0]
         self._y = tup[1]
-<<<<<<< HEAD
         self._z = 22
         self._x2 = tup2[0]
         self._y2 = tup2[1]
         self._z2 = 22
-=======
-        self._z = 25
-        self._x2 = tup2[0]
-        self._y2 = tup2[1]
-        self._z2 = 25
->>>>>>> 5b046fa9782aaac1665a0585b885b2527213ce12
         self.tilingFactor = 1
         self.fname = fname
 
