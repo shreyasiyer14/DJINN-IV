@@ -19,3 +19,4 @@ from physics.Thrust import *
 from physics.Mass import *
 from physics.Torque import *
 from widgets.HUDEntity import *
+from decoration.Wallpaper import *
