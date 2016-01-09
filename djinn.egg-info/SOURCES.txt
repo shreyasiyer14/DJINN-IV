@@ -29,6 +29,8 @@ djinn/scenes/shapes/Triangle.py
 djinn/scenes/shapes/__init__.py
 djinn/scenes/textures/Texture.py
 djinn/scenes/textures/__init__.py
+djinn/widgets/HUDEntity.py
+djinn/widgets/__init__.py
 djinn/window/KeyboardEvent.py
 djinn/window/Window.py
 djinn/window/__init__.py

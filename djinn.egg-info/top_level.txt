@@ -6,4 +6,5 @@ djinn/scenes
 djinn/scenes/prefabs/
 djinn/scenes/shapes
 djinn/scenes/textures
+djinn/widgets
 djinn/window/
