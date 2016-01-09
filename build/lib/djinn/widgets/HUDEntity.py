@@ -7,10 +7,10 @@ class HUDEntity:
     def __init__(self,tup,tup2,fname):
         self._x = tup[0]
         self._y = tup[1]
-        self._z = 15
+        self._z = 25
         self._x2 = tup2[0]
         self._y2 = tup2[1]
-        self._z2 = 15
+        self._z2 = 25
         self.tilingFactor = 1
         self.fname = fname
 

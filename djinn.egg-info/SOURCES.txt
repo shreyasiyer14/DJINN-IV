@@ -5,6 +5,8 @@ djinn.egg-info/PKG-INFO
 djinn.egg-info/SOURCES.txt
 djinn.egg-info/dependency_links.txt
 djinn.egg-info/top_level.txt
+djinn/decoration/Wallpaper.py
+djinn/decoration/__init__.py
 djinn/math/Vector.py
 djinn/math/__init__.py
 djinn/physics/Acceleration.py

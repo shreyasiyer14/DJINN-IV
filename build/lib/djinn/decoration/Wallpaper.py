@@ -3,7 +3,7 @@ from pygame.locals import *
 from OpenGL.GL import *
 from djinn import *
 from OpenGL.GLU import *
-class HUDEntity:
+class Wallpaper:
     def __init__(self,tup,tup2,fname):
         self._x = tup[0]
         self._y = tup[1]

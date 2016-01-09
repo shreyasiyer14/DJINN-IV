@@ -1,4 +1,5 @@
 djinn
+djinn/decoration
 djinn/math
 djinn/physics
 djinn/player
