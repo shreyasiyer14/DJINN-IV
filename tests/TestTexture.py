@@ -7,7 +7,7 @@ if __name__=="__main__":
 	play = Player(0,0,-5.0)
 	room = Room(20,7,4,1,0,10,2,'brick.bmp')
 	play.setOrigin(0,0,-25.0)
-	light0 = Light(20,10,0,[1,1,1,1],1)
+	light0 = Light(0,2,0,[1,1,1,1],1)
 	light0.bake(GL_LIGHT0)
 	moveList = [0,0,0]
 	keymap = {'up':[0,0,0.05],'down':[0,0,-0.05],'left':[0.05,0,0],'right':[-0.05,0,0]}
