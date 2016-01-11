@@ -14,6 +14,8 @@ class Light:
 		self.intensity = intensity
 	
 	def bake(self,lightconst):
+                glPushMatrix()
+                
 		glEnable(GL_LIGHTING)
 		glEnable(lightconst)	
                 colorList = [1,1,1,1.0]
@@ -23,4 +25,6 @@ class Light:
                 glLightfv(lightconst,GL_DIFFUSE,[0.8,0.8,0.8,self.intensity])
                 glLightfv(lightconst,GL_SPECULAR,colorList)
 		glLightfv(lightconst,GL_POSITION,lightpos)
+		
+		glPopMatrix()
 	
