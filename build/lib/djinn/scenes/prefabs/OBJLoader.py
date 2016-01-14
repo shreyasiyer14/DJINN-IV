@@ -2,10 +2,9 @@ import pygame
 from OpenGL.GL import *
  
 def MTL(filename,x,y,z):
+    glPushMatrix()
     contents = {}
     mtl = None
-    glPushMatrix()
-    glTranslatef(x,y,z)
     for line in open(filename, "r"):
         if line.startswith('#'): continue
         values = line.split()
@@ -20,6 +19,8 @@ def MTL(filename,x,y,z):
             surf = pygame.image.load(mtl['map_Kd'])
             image = pygame.image.tostring(surf, 'RGBA', 1)
             ix, iy = surf.get_rect().size
+            glDisable(GL_TEXTURE_2D)
+            glEnable(GL_TEXTURE_2D)
             texid = mtl['texture_Kd'] = glGenTextures(1)
             glBindTexture(GL_TEXTURE_2D, texid)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
@@ -32,10 +33,12 @@ def MTL(filename,x,y,z):
             mtl[values[0]] = map(float, values[1:])
     glPopMatrix()
     return contents
+
  
 class OBJ:
     def __init__(self,x,y,z, filename, swapyz=False):
         """Loads a Wavefront OBJ file. """
+        glPushMatrix()
         self.vertices = []
         self.normals = []
         self.texcoords = []
@@ -52,11 +55,16 @@ class OBJ:
                 v = map(float, values[1:4])
                 if swapyz:
                     v = v[0], v[2], v[1]
+                else:
+                    v = v[0], v[1], -v[2]
+
                 self.vertices.append(v)
             elif values[0] == 'vn':
                 v = map(float, values[1:4])
                 if swapyz:
                     v = v[0], v[2], v[1]
+                else:
+                    v = v[0], v[1], -v[2]
                 self.normals.append(v)
             elif values[0] == 'vt':
                 self.texcoords.append(map(float, values[1:3]))
@@ -104,5 +112,7 @@ class OBJ:
                     glTexCoord2fv(self.texcoords[texture_coords[i] - 1])
                 glVertex3fv(self.vertices[vertices[i] - 1])
             glEnd()
+        glDeleteTextures(0)
         glDisable(GL_TEXTURE_2D)
         glEndList()
+        glPopMatrix()
