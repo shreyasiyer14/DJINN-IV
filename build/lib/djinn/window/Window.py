@@ -15,7 +15,7 @@ class Window:
 		glMatrixMode(GL_PROJECTION)
 		glLoadIdentity()
 	
-		gluPerspective(fieldOfView,(self.width/self.height),0.1,50)
+		gluPerspective(fieldOfView,(self.width/self.height),0.1,500)
 		glEnable(GL_DEPTH_TEST)
 		glMatrixMode(GL_MODELVIEW)
 		return gameDisplay
