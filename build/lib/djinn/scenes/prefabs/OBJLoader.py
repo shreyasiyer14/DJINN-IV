@@ -1,6 +1,6 @@
 import pygame
 from OpenGL.GL import *
- 
+from djinn import *
 def MTL(filename,x,y,z):
     glPushMatrix()
     contents = {}
@@ -19,8 +19,6 @@ def MTL(filename,x,y,z):
             surf = pygame.image.load(mtl['map_Kd'])
             image = pygame.image.tostring(surf, 'RGBA', 1)
             ix, iy = surf.get_rect().size
-            glDisable(GL_TEXTURE_2D)
-            glEnable(GL_TEXTURE_2D)
             texid = mtl['texture_Kd'] = glGenTextures(1)
             glBindTexture(GL_TEXTURE_2D, texid)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
@@ -31,8 +29,9 @@ def MTL(filename,x,y,z):
                 GL_UNSIGNED_BYTE, image)
         else:
             mtl[values[0]] = map(float, values[1:])
-    glPopMatrix()
     return contents
+    glPopMatrix()
+
 
  
 class OBJ:
@@ -47,6 +46,8 @@ class OBJ:
         self.y = y
         self.z = z
         material = None
+        self.fname = filename
+        glTranslatef(self.x, self.y, self.z)
         for line in open(filename, "r"):
             if line.startswith('#'): continue
             values = line.split()
@@ -93,13 +94,15 @@ class OBJ:
         glNewList(self.gl_list, GL_COMPILE)
         glEnable(GL_TEXTURE_2D)
         glFrontFace(GL_CCW)
+        tex = Texture('FarmhouseTexture.bmp')
         for face in self.faces:
             vertices, normals, texture_coords, material = face
  
             mtl = self.mtl[material]
             if 'texture_Kd' in mtl:
                 # use diffuse texmap
-                glBindTexture(GL_TEXTURE_2D, mtl['texture_Kd'])
+                glBindTexture(GL_TEXTURE_2D,tex.loadTexture())
+                glBindTexture(GL_TEXTURE_2D,mtl['texture_Kd'])
             else:
                 # just use diffuse colour
                 glColor(*mtl['Kd'])
@@ -112,7 +115,7 @@ class OBJ:
                     glTexCoord2fv(self.texcoords[texture_coords[i] - 1])
                 glVertex3fv(self.vertices[vertices[i] - 1])
             glEnd()
-        glDeleteTextures(0)
+            glDeleteTextures(0)
         glDisable(GL_TEXTURE_2D)
         glEndList()
         glPopMatrix()
