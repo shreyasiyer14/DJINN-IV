@@ -10,7 +10,7 @@ if __name__=="__main__":
 	moveList = [0,0,0]
 	keymap = {'up':[0,0,0.05],'down':[0,0,-0.05],'left':[0.05,0,0],'right':[-0.05,0,0]}
 	while True:
-                KeyboardEvent(moveList,keymap)
+                KeyboardEvent(moveList,0, keymap)
 		window.clear()
                 light0 = Light(-3.5,4,26.0,[1,1,1,1],1)
                 light0.bake(GL_LIGHT0)

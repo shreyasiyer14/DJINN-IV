@@ -2,7 +2,6 @@
 # RMB + move: pan
 # Scroll wheel: zoom in/out
 import sys
-# IMPORT OBJECT LOADER
 from djinn import *
  
 pygame.init()
