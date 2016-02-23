@@ -11,6 +11,7 @@ def KeyboardEvent(moveArray, angle, keymap):
     oldMouseX = mouseX
     oldMouseY = mouseY
     angle = 0
+    mouse = False
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -24,22 +25,20 @@ def KeyboardEvent(moveArray, angle, keymap):
                 i += 1
         elif event.type == pygame.KEYUP:
             dx,dy,dz = 0,0,0
-
+        
         if event.type == pygame.MOUSEMOTION:
-            mouseX = pygame.mouse.get_pos()[0]
-            mouseY = pygame.mouse.get_pos()[1]
-            if (mouseX - oldMouseX > 0):
-                angle += 0.1
-            else:
-                angle -= 0.1
-                
+            mouse = True
+        '''      
         radians = 3.14 * (angle - 90.0)/180.0
         cameraX = 0.5 + math.sin(radians)*mouseY
         cameraZ = 0.5 + math.cos(radians)*mouseY
         cameraY = 0.5 + mouseY/2.0
 
         gluLookAt(0.5 , 0.5 , 0.5 ,cameraX*0.005, cameraY*0.005, cameraZ*0.005, 0, 1 ,0)
+        '''
         moveArray[0] = dx
         moveArray[1] = dy
         moveArray[2] = dz
+        return mouse
+        
         

@@ -2,6 +2,7 @@ from dependencies import *
 
 from window.Window import *
 from window.KeyboardEvent import *
+from window.MouseEvent import *
 from scenes.shapes.Sphere import *
 from scenes.shapes.Room import *
 from scenes.shapes.Cylinder import *

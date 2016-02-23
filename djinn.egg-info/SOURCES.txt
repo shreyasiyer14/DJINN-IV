@@ -35,5 +35,6 @@ djinn/scenes/textures/__init__.py
 djinn/widgets/HUDEntity.py
 djinn/widgets/__init__.py
 djinn/window/KeyboardEvent.py
+djinn/window/MouseEvent.py
 djinn/window/Window.py
 djinn/window/__init__.py
