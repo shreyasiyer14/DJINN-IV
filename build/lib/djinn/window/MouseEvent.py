@@ -22,8 +22,9 @@ def moveCamera(dist, dir):
         global camPitch, camX, camZ, camYaw
 
         rad=(camYaw+dir)*3.1459/180.0
-        camX-= math.sin(rad)*dist    
-        camZ-= math.cos(rad)*dist   
+        camX = math.sin(rad)*dist    
+        camZ = math.cos(rad)*dist
+        return camX, camZ
  
 def moveCameraUp(dist, dir):
         rad=(camPitch+dir)*3.1459/180.0
@@ -34,10 +35,13 @@ def Control(mousevel, movevel):
 
     mouseX = pygame.mouse.get_pos()[0]
     mouseY = pygame.mouse.get_pos()[1]
-    midX = 400
-    midY = 300
-    camYaw=0.005*mousevel*(midX-mouseX)
-    camPitch=0.005*mousevel*(midY-mouseY)
+    oldMouseX = mouseX
+    oldMouseY = mouseY
+    
+    mouseX = 400
+    mouseY = 300
+    camYaw=0.005*mousevel*(mouseX-oldMouseX)
+    camPitch=0.005*mousevel*(mouseY-oldMouseY)
     lockCamera()
     '''
     if(camPitch!=90 && camPitch!=-90):
