@@ -40,15 +40,15 @@ def Control(mousevel, movevel):
     
     mouseX = 400
     mouseY = 300
-    camYaw=0.005*mousevel*(mouseX-oldMouseX)
-    camPitch=0.005*mousevel*(mouseY-oldMouseY)
+    camYaw=0.01*mousevel*(mouseX-oldMouseX)
+    camPitch=0.01*mousevel*(mouseY-oldMouseY)
     lockCamera()
-    '''
-    if(camPitch!=90 && camPitch!=-90):
+    
+    if(camPitch!=90 and camPitch!=-90):
         moveCamera(movevel,0.0)
-    if(camPitch!=90 && camPitch!=-90):
+    if(camPitch!=90 and camPitch!=-90):
         moveCamera(movevel,180.0)
-    '''  
+      
     glRotatef(-camPitch,1.0,0.0,0.0)
     glRotatef(-camYaw,0.0,1.0,0.0)
 
