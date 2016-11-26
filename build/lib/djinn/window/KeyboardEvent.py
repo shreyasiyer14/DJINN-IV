@@ -28,7 +28,7 @@ def KeyboardEvent(moveArray, angle, keymap):
         
         if event.type == pygame.MOUSEMOTION:
             mouse = True
-        '''      
+        '''   
         radians = 3.14 * (angle - 90.0)/180.0
         cameraX = 0.5 + math.sin(radians)*mouseY
         cameraZ = 0.5 + math.cos(radians)*mouseY
@@ -40,5 +40,3 @@ def KeyboardEvent(moveArray, angle, keymap):
         moveArray[1] = dy
         moveArray[2] = dz
         return mouse
-        
-        

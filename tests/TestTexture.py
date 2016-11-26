@@ -13,8 +13,9 @@ if __name__=="__main__":
 	while True:
                 mouse = KeyboardEvent(moveList,0, keymap)
 		window.clear()
-		if mouse:
-                        Control(0.2,0.2)
+		#if mouse:
+                        #Control(0.2,0.2)
+                        #UpdateCamera()
                 light0 = Light(-3.5,4,26.0,[1,1,1,1],1)
                 light0.bake(GL_LIGHT0)
 		play.move(moveList[0],moveList[1],moveList[2])
