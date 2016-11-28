@@ -8,6 +8,6 @@ class Acceleration:
     
     def resultantForce(self,massObj):
         forceVector = Vector(0,0,0)
-        forceVector.add(self._ax*massObj.mass, self._ay*massObj.mass, self._az*massObj.mass)
+        forceVector.addVector(self._ax*massObj.mass, self._ay*massObj.mass, self._az*massObj.mass)
         return forceVector
      

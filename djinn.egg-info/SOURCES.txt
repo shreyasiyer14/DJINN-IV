@@ -11,6 +11,7 @@ djinn/math/Vector.py
 djinn/math/__init__.py
 djinn/physics/Acceleration.py
 djinn/physics/Mass.py
+djinn/physics/RigidBody.py
 djinn/physics/Thrust.py
 djinn/physics/Torque.py
 djinn/physics/__init__.py
@@ -26,6 +27,7 @@ djinn/scenes/shapes/Box.py
 djinn/scenes/shapes/Box2.py
 djinn/scenes/shapes/Cylinder.py
 djinn/scenes/shapes/Plane.py
+djinn/scenes/shapes/RB.py
 djinn/scenes/shapes/Room.py
 djinn/scenes/shapes/Sphere.py
 djinn/scenes/shapes/Triangle.py
