@@ -15,16 +15,18 @@ class RB:
 		self._x = x
 		self._y = y
 		self._z = z
-		self._rb = None
+		self.rigidBody = None
 
 	def attachRigidBody(self, rb):
-                self._rb = rb
-                self._rb.initRigidBody()
-                
+                self.rigidBody = rb
+                self.rigidBody.initRigidBody()
+
 	def build(self):
-                self._rb.render()
+                self.rigidBody.addGravity()
+                
                 #***Have to include a tick***9.8*(Time per frame)***
-                self._y = self._rb._ay
+                self._y = self.rigidBody._ay
+                
                 glPushMatrix()
 		material = Material()
 		material.init(128)

@@ -21,3 +21,9 @@ class RigidBody:
     def addGravity(self):
         self._ay += (self._gravity * self._deltaTime)
         self._gravity += self._g._ay*0.01
+
+    def addThrust(self, thrust):
+        self._ax += thrust.thrustValueX
+        self._ay += thrust.thrustValueY
+        self._az += thrust.thrustValueZ
+

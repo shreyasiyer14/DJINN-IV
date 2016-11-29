@@ -9,6 +9,7 @@ djinn/decoration/Wallpaper.py
 djinn/decoration/__init__.py
 djinn/math/Vector.py
 djinn/math/__init__.py
+djinn/physics/AABB.py
 djinn/physics/Acceleration.py
 djinn/physics/Mass.py
 djinn/physics/RigidBody.py

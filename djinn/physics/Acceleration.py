@@ -6,8 +6,8 @@ class Acceleration:
         self._ay = ay
         self._az = az
     
-    def resultantForce(self,massObj):
-        forceVector = Vector(0,0,0)
-        forceVector.addVector(self._ax*massObj.mass, self._ay*massObj.mass, self._az*massObj.mass)
+    def resultantForce(self,a2):
+        forceVector = Vector(a2._ax,a2._ay,a2._az)
+        forceVector.addVector(self._ax, self._ay, self._az)
         return forceVector
      
