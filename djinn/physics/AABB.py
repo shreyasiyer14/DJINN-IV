@@ -14,5 +14,7 @@ class AABB:
     def checkWithOtherAABB(self, aabb):
         if (self._bx <= aabb._bx):
             if (self._bmaxx >= aabb._bx):
+                if (self._by <= aabb._by and self._bmaxy >= aabb.by and self._bmaxy < aabb._bmaxy):
+                    return true
                 
                 
